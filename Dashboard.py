@@ -13,7 +13,7 @@ dynamodb = boto3.resource('dynamodb', region_name='ap-south-1')
 table = dynamodb.Table('SurakshaNetAnalytics')
 
 sns = boto3.client('sns', region_name='ap-south-1')
-SNS_TOPIC_ARN = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+SNS_TOPIC_ARN = "arn:aws:sns:ap-south-1:593737078358:surakshaNetAlerts"
 
 model = YOLO("yolov8n.pt")
 
@@ -212,4 +212,5 @@ while True:
 
 video1.release()
 video2.release()
+
 video3.release()
